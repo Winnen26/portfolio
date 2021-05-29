@@ -126,6 +126,15 @@ p{
   background-color: var(--color-dark-pink);
 }
 
+.navBar__toggle-btn{
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  font-size: 24px;
+  color: var(--color-white);
+  display: none;
+}
+
 /* Home */
 #home{
   background: url(./img/homebackground.png) no-repeat center/cover;
@@ -478,4 +487,45 @@ p{
 
 .contact__rights{
   font-size: var(--font-micro);
+}
+
+/* For below 768px screen width */
+@media screen and (max-width: 768px){
+  .navBar__toggle-btn{
+    display: block;
+  }
+
+  #navBar{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navBar__menu{
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+
+  .about__majors{
+    flex-direction: column;
+  }
+  
+  .major{
+    margin-bottom: 38px;
+  }
+
+  .skills__skillset{
+    flex-direction: column;
+  }
+
+  .project{
+    flex-grow: 1;
+    justify-content: center;
+  }
+
+  .testimonial__avatar{
+    width: 80px;
+    height: 80px;
+  }
 }
