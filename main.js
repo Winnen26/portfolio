@@ -33,11 +33,6 @@ homeContactBtn.addEventListener('click', function(){
   scrollIntoView('#contact');
 });
 
-function scrollIntoView(selector){
-  const scrollTo = document.querySelector(selector);
-  scrollTo.scrollIntoView({behavior: 'smooth' , block: "start", inline: "nearest"});
-};
-
 // Make home slowly fade to  transparent as the window scrolls down
 const home = document.querySelector('#home')
 const homeHeight = home.getBoundingClientRect().height;
@@ -50,3 +45,60 @@ document.addEventListener('scroll', function(){
     homeContainer.style.opacity = opacity;
   }
 });
+
+// Show "Arrow up" button when scrolling down
+const arrowUp = document.querySelector('.arrow-up');
+
+document.addEventListener('scroll', function(){
+  if(window.scrollY > homeHeight / 2){
+    arrowUp.classList.add('visible');
+  }else{
+    arrowUp.classList.remove('visible');
+  }
+});
+
+// Handle click on the "arrow up" button
+arrowUp.addEventListener('click', function(){
+  scrollIntoView('#home');
+})
+
+
+
+
+
+
+
+function scrollIntoView(selector){
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({behavior: 'smooth' , block: "start", inline: "nearest"});
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Top
+// const top1 = document.querySelector('#top');
+// console.log(top1)
+
+// document.addEventListener('scroll', function(){
+//   if(window.scrollY > navBarHeight){
+//     top1.style.display = 'block'
+//   }else{
+//     top1.style.display = 'none'
+//   }
+// });
+
+// top1.addEventListener('click', function(){
+//   document.body.scrollTop = 0;
+//   document.documentElement.scrollTop = 0;
+// })
