@@ -14,6 +14,7 @@
   --color-yellow: #fff7d1;
   --color-orange: #feb546;
   --color-black: #000000;
+  --color-transparent: transparent;
 
   /* Font size */
   --font-large: 48px;
@@ -96,10 +97,19 @@ p{
 #navBar{
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-pink);
+  background-color: var(--color-transparent);
   align-items: center;
   color: var(--color-white);
   padding: 16px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: var(--animation-duration) ease-in-out;
+}
+
+#navBar.navBar--dark{
+  background-color: var(--color-pink);
+  padding: 8px;
 }
 
 .navBar__logo{
@@ -139,6 +149,7 @@ p{
 #home{
   background: url(./img/homebackground.png) no-repeat center/cover;
   padding: 40px;
+  padding-top: 120px;
   text-align: center;
 }
 
