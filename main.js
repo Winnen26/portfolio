@@ -73,6 +73,13 @@ workBtnContainer.addEventListener('click', function(event){
     return;
   }
 
+  // Remove selection from the previous item and select the new one
+const selection = document.querySelector('.category__btn.selected');
+selection.classList.remove('selected');
+const btnTarget =  event.target.nodeName === 'BUTTON' ? event.target : event.target.parentNode;
+btnTarget.classList.add('selected');
+
+
   projectContainer.classList.add('anim-out');
 
   setTimeout(function(){
