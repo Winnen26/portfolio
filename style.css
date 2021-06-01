@@ -545,6 +545,11 @@ p{
   #navBar{
     flex-direction: column;
     align-items: flex-start;
+    background-color: var(--color-pink);
+  }
+
+  #navBar.navBar--dark{
+    padding: 16px;
   }
 
   .navBar__menu{
@@ -552,6 +557,10 @@ p{
     text-align: center;
     width: 100%;
     display: none;
+  }
+
+  .navBar__menu.open{
+    display: block;
   }
 
   .about__majors{

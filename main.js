@@ -23,8 +23,16 @@ navbarMenu.addEventListener('click', function(event){
     return;
   };
 
+  navbarMenu.classList.remove('open')
   scrollIntoView(link);
 });
+
+// Navbar toggle button for small screen
+const navBarToggleBtn = document.querySelector('.navBar__toggle-btn');
+
+navBarToggleBtn.addEventListener('click', function(){
+  navbarMenu.classList.toggle('open');
+})
 
 // Handle click on "contact me" button on home
 const homeContactBtn = document.querySelector('.home__contact');
@@ -94,8 +102,7 @@ btnTarget.classList.add('selected');
   
     projectContainer.classList.remove('anim-out');
   }, 300)
-})
-
+});
 
 
 
