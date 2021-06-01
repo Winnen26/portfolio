@@ -429,7 +429,7 @@ p{
 }
 
 .project__description h3{
-  color: var(--color-white);
+  color: var(--color-orange);
 }
 
 .project__description h3::after{
@@ -437,9 +437,10 @@ p{
   display: block;
   position: relative;
   top: 0;
-  left: calc(50% - 12.5px);
+  left: 50%;
+  transform: translateX(-50%);
   margin-top: 8px;
-  width: 25px;
+  width: 100px;
   height: 2px;
   background: var(--color-dark-white);
 }
