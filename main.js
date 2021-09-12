@@ -22,9 +22,9 @@ navbarMenu.addEventListener('click', function(event){
   if(link === undefined){
     return;
   };
-
-  navbarMenu.classList.remove('open')
   scrollIntoView(link);
+  
+  navbarMenu.classList.remove('open')
 });
 
 // Navbar toggle button for small screen
