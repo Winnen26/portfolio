@@ -3,6 +3,7 @@
 :root {
   /* Color */
   --color-white: #ffffff;
+  --color-blue: #1e22c8;
   --color-light-white: #eeeeee;
   --color-dark-white: #bdbdbd;
   --color-pink: #fe918d;
@@ -10,7 +11,6 @@
   --color-dark-grey: #4d4d4d;
   --color-grey: #616161;
   --color-light-grey: #7c7979;
-  --color-blue: #73aace;
   --color-yellow: #fff7d1;
   --color-orange: #feb546;
   --color-black: #000000;
@@ -43,13 +43,13 @@
 
 body{
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Roboto", sans-serif;
   cursor: default;
 }
 
 a{
   text-decoration: none;
-  color: var(--color-white);
+  color: var(--color-blue);
 }
 
 ul{
@@ -68,28 +68,28 @@ button{
 h1{
   font-size: var(--font-large);
   font-weight: var(--weight-bold);
-  color: var(--color-black);
+  color: var(--color-white);
   margin: 16px 0;
 }
 
 h2{
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
-  color: var(--color-black);
+  color: var(--color-white);
   margin: 8px 0;
 }
 
 h3{
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
-  color: var(--color-black);
+  color: var(--color-white);
   margin: 8px 0;
 }
 
 p{
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
-  color: var(--color-black);
+  color: var(--color-white);
   margin: 4px 0;
 }
 
@@ -99,7 +99,7 @@ p{
   justify-content: space-between;
   background-color: var(--color-transparent);
   align-items: center;
-  color: var(--color-white);
+  color: var(--color-blue);
   padding: 16px;
   position: fixed;
   top: 0;
@@ -109,7 +109,7 @@ p{
 }
 
 #navBar.navBar--dark{
-  background-color: var(--color-pink);
+  background-color: var(--color-white);
   padding: 8px;
 }
 
@@ -126,30 +126,31 @@ p{
   padding: 8px 12px;
   margin: 0 4px;
   cursor: pointer;
+  font-weight: var(--weight-bold);
   border: 1px solid var(--color-transparent);
   border-radius: var(--size-border-radius);
 }
 
 .navBar__menu__item.active{
-  border: 1px solid var(--color-white);
+  border: 1px solid var(--color-blue);
 }
 
 .navBar__menu__item:hover{
-  background-color: var(--color-dark-pink);
-  border-color: var(--color-white);
+  background-color: var(--color-dark-blue);
+  border-color: var(--color-blue);
 }
 
 .navBar__toggle-btn{
   position: absolute;
   right: 16px;
   font-size: 24px;
-  color: var(--color-white);
+  color: var(--color-blue);
   display: none;
 }
 
 /* Home */
 #home{
-  background: url(./img/homebackground.png) no-repeat center/cover;
+  background-color: var(--color-white);
   padding: 40px;
   padding-top: 120px;
   text-align: center;
@@ -168,7 +169,7 @@ p{
 
 .home__title,
 .home__description{
-  color: var(--color-white);
+  color: var(--color-blue);
 }
 
 .home__contact{
@@ -176,9 +177,9 @@ p{
   font-weight: var(--weight-bold);
   margin: 24px;
   padding: 8px 12px;
-  border: 2px solid var(--color-white);
+  border: 2px solid var(--color-blue);
   border-radius: var(--size-border-radius);
-  color: var(--color-white);
+  color: var(--color-blue);
 }
 
 .home__contact:hover{
@@ -200,6 +201,10 @@ p{
 }
 
 /* About */
+#about{
+  background-color: var(--color-blue);
+}
+
 .about__majors{
   display: flex;
   justify-content: space-between;
@@ -212,21 +217,20 @@ p{
   font-size: 70px;
   line-height: 170px;
   margin: auto;
-  color: var(--color-blue);
-  border: 1px solid var(--color-blue);
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
   border-radius: 50%;
   margin-bottom: 16px;
 }
 
 .major__icon:hover .fab{
-  color: var(--color-pink);
   transform: scale(1.1) rotate(-30deg);
   transition: all var(--animation-duration) ease;
 }
 
 .major__title,
 .major__description{
-  color: var(--color-dark-grey);
+  color: var(--color-white);
 }
 
 .major__description{
@@ -250,7 +254,7 @@ p{
 
 .description__name,
 .description__period{
-  color: var(--color-light-grey);
+  color: var(--color-white);
 }
 
 .description__name{
@@ -263,20 +267,25 @@ p{
 
 /* Skills */
 #skills{
-  background-color: var(--color-yellow);
+  background-color: var(--color-white);
+}
+
+.skills__title{
+  color: var(--color-black);
 }
 
 .skills__skillset{
   display: flex;
-  background-color: var(--color-light-grey);
+  background-color: var(--color-blue);
   color: var(--color-light-white);
   margin: 20px 0;
 }
 
 .skillset__left{
   flex-basis: 60%;
-  background-color: var(--color-dark-grey);
+  background-color: var(--color-blue);
   padding: 20px 40px;
+  border: 1px solid black;
 }
 
 .skillset__title{
@@ -300,7 +309,7 @@ p{
 
 .skill__value{
   height: 3px;
-  background-color: var(--color-orange);
+  background-color: var(--color-white);
 }
 
 .skill:nth-of-type(1) .skill__value{
@@ -332,7 +341,8 @@ p{
 }
 
 .tools{
-  background-color: var(--color-grey);
+  background-color: var(--color-blue);
+  border-bottom: 1px solid black;
 }
 
 .tools,
@@ -346,7 +356,7 @@ p{
 }
 
 .category__btn{
-  border: 1px solid var(--color-dark-white);
+  border: 1px solid var(--color-blue);
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
   padding: 8px 48px;
@@ -355,7 +365,7 @@ p{
 
 .category__btn.selected,
 .category__btn:hover{
-  background-color: var(--color-pink);
+  background-color: var(--color-blue);
   color: var(--color-white);
 }
 
@@ -495,7 +505,7 @@ p{
 
 /* Contact */
 #contact{
-  background-color: var(--color-pink);
+  background-color: var(--color-blue);
 }
 
 .contact__title,
@@ -512,6 +522,7 @@ p{
   font-size: var(--font-large);
   margin: 24px 10px;
   transition: all var(--animation-duration) ease-in;
+  color: var(--color-white);
 }
 
 .contact__links i:hover {
@@ -542,6 +553,7 @@ p{
 .arrow-up.visible{
   opacity: 1;
   pointer-events: auto;
+  background-color: var(--color-blue);
 }
 
 
@@ -563,7 +575,7 @@ p{
   #navBar{
     flex-direction: column;
     align-items: flex-start;
-    background-color: var(--color-pink);
+    background-color: var(--color-white);
   }
 
   #navBar.navBar--dark{
